@@ -216,3 +216,43 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ============================================================
+# ModFraze-specific additions
+# ============================================================
+
+# Local SQLite database (January build)
+*.db
+*.sqlite
+*.sqlite3
+modfraze.db
+
+# Agent output — regenerated each run
+reports/
+*-raw.json
+*-shortlist.md
+
+# Never commit credential screenshots or key files
+*Codes*.png
+*backup*codes*
+*.pem
+*.key
+credentials.json
+token.json
+
+# Allow the documented template, block real env files
+.env.*
+!.env.example
+
+# Node (if the xdk TypeScript SDK ends up in-tree)
+node_modules/
+npm-debug.log*
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# Office temp files
+~$*
