@@ -1,0 +1,33 @@
+# ModFraze — current runtime.
+# The agent itself only needs `anthropic`; everything else is per-subsystem.
+# Install the base, then add a section when you actually wire that part up.
+
+# --- base: trend scout agent (agents/trend_scout) ---
+anthropic>=0.40.0
+python-dotenv>=1.0.0
+
+# --- persistence (db/, pipeline/) ---
+sqlalchemy>=2.0.25
+
+# --- ingestion ---
+# apify-client>=1.6.3          # TikTok via integrations/tiktok_adapter.py
+# xdk                          # X / Twitter official SDK — pip install, do not vendor
+# praw>=7.7.1                  # only if reddit's public .json rate-limits you
+
+# --- commerce (integrations/) ---
+# requests>=2.31.0
+# pillow>=10.2.0
+
+# --- ops UI (ui/, dashboard/) ---
+# streamlit>=1.30.0
+# pandas>=2.2.0
+# openpyxl>=3.1.0
+
+# --- orchestration (workflows/) ---
+# prefect>=2.14.21
+
+# --- dev ---
+# pytest>=8.0.0
+# black>=24.1.1
+
+# The full pinned January list is preserved at requirements-january.txt.

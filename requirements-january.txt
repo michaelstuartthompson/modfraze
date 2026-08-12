@@ -1,0 +1,80 @@
+# Viral Merch Pipeline - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# ============================================================================
+# Core Framework
+# ============================================================================
+python-dotenv==1.0.0
+
+# ============================================================================
+# Database & ORM
+# ============================================================================
+sqlalchemy==2.0.25
+alembic==1.13.1  # For database migrations
+
+# ============================================================================
+# Workflow Orchestration
+# ============================================================================
+prefect==2.14.21
+prefect-email==0.3.0  # For email notifications
+
+# ============================================================================
+# Social Media Scraping
+# ============================================================================
+# Reddit
+praw==7.7.1
+
+# TikTok/Twitter (Apify client)
+apify-client==1.6.3
+
+# Alternative scrapers
+# snscrape==0.7.0.20230622  # Twitter (deprecated, use Apify instead)
+
+# ============================================================================
+# AI/ML - Design Generation
+# ============================================================================
+openai==1.10.0  # DALL-E 3
+pillow==10.2.0  # Image processing
+
+# Alternative image generation
+# replicate==0.22.0  # For Stable Diffusion
+
+# ============================================================================
+# E-commerce APIs
+# ============================================================================
+requests==2.31.0  # HTTP client for Shopify/Printify/Meta APIs
+shopify-python-api==12.4.0  # Optional: Official Shopify library
+
+# ============================================================================
+# Ads APIs
+# ============================================================================
+facebook-business==19.0.0  # Meta Ads SDK (alternative to direct API)
+
+# ============================================================================
+# UI - Approval Dashboard
+# ============================================================================
+streamlit==1.30.0
+pandas==2.2.0  # For data display in Streamlit
+
+# ============================================================================
+# Utilities
+# ============================================================================
+python-dateutil==2.8.2
+pytz==2024.1
+
+# ============================================================================
+# Development & Testing
+# ============================================================================
+pytest==8.0.0
+pytest-cov==4.1.0
+black==24.1.1  # Code formatting
+flake8==7.0.0  # Linting
+ipython==8.20.0  # Better REPL
+
+# ============================================================================
+# Optional - Advanced Features
+# ============================================================================
+# redis==5.0.1  # If using Redis queue
+# celery==5.3.4  # Alternative to Prefect for task queuing
+# sentry-sdk==1.40.0  # Error tracking
+# prometheus-client==0.19.0  # Metrics

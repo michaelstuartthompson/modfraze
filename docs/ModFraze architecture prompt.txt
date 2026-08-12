@@ -1,0 +1,734 @@
+You are an expert startup systems architect, Shopify/TikTok Shop e-commerce strategist, automation engineer, prompt engineer, dashboard designer, and developer mentor.
+
+Your task is to architect the MVP operating system for **ModFraze**, a branch of **MichaelStuartThompson.com**.
+
+## Project Context
+
+ModFraze is a maximalist abstract graphic design brand created by artist, muralist, AI/tech generalist, and author Michael Stuart Thompson.
+
+ModFraze sells one-of-a-kind abstract graphic designs digitally and on drop-shipped merchandise. The brand must support revenue generation, audience growth, repeatable design-to-market workflows, and portfolio/resume-building evidence of technical skill.
+
+This is not only an art shop. It is also a visible proof-of-work system showing Michael’s ability to combine art, AI, automation, e-commerce, analytics, content systems, and startup execution.
+
+ModFraze must connect to the larger MichaelStuartThompson.com ecosystem, which includes:
+
+* original painting and mural work
+* AI/tech generalist services
+* writing/memoir projects
+* digital products
+* creative consulting
+* portfolio/resume material
+
+The colors, fonts, landing page, and broader brand design are still in progress. Focus on the **bootstrapping architecture and MVP operating system**, not final visual branding.
+
+## Primary MVP Priority
+
+Architect for:
+
+1. **Shopify**
+2. **TikTok Shop**
+
+These are the first active sales channels.
+
+Gradual onboarding should be planned for:
+
+* Etsy
+* Pinterest
+* Facebook
+* Instagram
+* X.com
+* Threads
+* Reddit
+* LinkedIn
+* Printify
+* Printful
+* Canva
+* CapCut
+* Meta Business Suite
+* Mailchimp
+
+## Core Objective
+
+Design a complete MVP system that allows Michael to:
+
+* create new designs quickly
+* turn designs into products
+* publish products to Shopify and TikTok Shop first
+* gradually syndicate products to Etsy, Pinterest, and other channels
+* generate promotional assets quickly
+* track ad performance clearly
+* know when to push, pause, revise, or kill ads
+* run email capture and email marketing
+* maintain consistent brand voice
+* preserve a clean technical portfolio trail
+* reduce daily decision fatigue
+* keep ModFraze moving while Michael works on other parts of Michaesdsdssdssdsddssd the recommended ModFraze MVP system in plain English.
+
+Clarify:
+
+* what gets built first
+* what gets deferred
+* how Shopify and TikTok Shop work together
+* how the system supports both revenue and portfolio-building
+* how Michael should think about the project operationally
+
+---
+
+# 2. MVP Scope
+
+Divide the system into:
+
+## Must Build Now
+
+Include only the systems required to launch, sell, track, and improve.
+
+## Build Next
+
+Include systems that are useful after the first sales/product tests.
+
+## Defer Until Later
+
+Include anything that is nice but distracting during MVP.
+
+---
+
+# 3. Recommended Project Folder Structure
+
+Create a clean folder/file architecture for a local project folder named:
+
+`ModFraze_MVP_OS`
+
+The structure should support:
+
+* product creation
+* design assets
+* mockups
+* Shopify listings
+* TikTok Shop listings
+* Etsy/Pinterest later
+* ad campaigns
+* email campaigns
+* analytics
+* dashboards
+* automation scripts
+* JSON schemas
+* prompt library
+* brand rules
+* portfolio case study documentation
+
+Use a clear tree format.
+
+Include folders such as, but not limited to:
+
+* `00_Command_Center`
+* `01_Brand_System`
+* `02_Design_Pipeline`
+* `03_Product_Catalog`
+* `04_Sales_Channels`
+* `05_Content_Engine`
+* `06_Ad_System`
+* `07_Email_System`
+* `08_Analytics_Dashboard`
+* `09_Automations`
+* `10_API_Integrations`
+* `11_Portfolio_Case_Study`
+* `99_Archive`
+
+For each major folder, explain what goes inside and why.
+
+---
+
+# 4. Naming Conventions
+
+Create practical naming rules for:
+
+* designs
+* product SKUs
+* product collections
+* mockups
+* Canva files
+* CapCut files
+* ad campaigns
+* email campaigns
+* TikTok videos
+* social posts
+* exported assets
+* JSON files
+* dashboard files
+
+Include examples using ModFraze-style names.
+
+Example format:
+
+`MF-DESIGN-YYYYMMDD-ShortName-V01`
+
+Also create rules for versioning:
+
+* draft
+* review
+* approved
+* published
+* archived
+
+---
+
+# 5. Data Model and JSON Schemas
+
+Create developer-style JSON schemas for the core ModFraze system.
+
+Include schemas for:
+
+## Design Asset
+
+Fields should include:
+
+* design_id
+* title
+* collection
+* visual_description
+* mood_tags
+* color_tags
+* source_file
+* export_files
+* created_date
+* status
+* usage_rights
+* notes
+
+## Product Listing
+
+Fields should include:
+
+* product_id
+* design_id
+* product_type
+* vendor
+* platform
+* title
+* description
+* tags
+* price
+* cost
+* margin
+* mockup_urls
+* listing_status
+* publish_date
+* platform_urls
+
+## Campaign
+
+Fields should include:
+
+* campaign_id
+* platform
+* objective
+* target_audience
+* product_ids
+* creative_assets
+* budget
+* start_date
+* end_date
+* status
+* KPI_targets
+
+## Content Post
+
+Fields should include:
+
+* post_id
+* platform
+* content_type
+* hook
+* caption
+* CTA
+* asset_url
+* product_id
+* scheduled_date
+* posted_url
+* performance_metrics
+
+## Email Campaign
+
+Fields should include:
+
+* email_id
+* segment
+* subject_line
+* preview_text
+* body_theme
+* products_featured
+* CTA
+* send_date
+* performance_metrics
+
+## Ad Performance Record
+
+Fields should include:
+
+* ad_id
+* campaign_id
+* platform
+* spend
+* impressions
+* clicks
+* CTR
+* CPC
+* conversions
+* revenue
+* ROAS
+* decision
+* next_action
+
+For each schema, include a sample JSON object.
+
+---
+
+# 6. Spreadsheet / Dashboard Architecture
+
+Design a practical dashboard system that could be built in Google Sheets, Airtable, Excel, or a lightweight database.
+
+Include the recommended tabs/tables:
+
+* Dashboard
+* Designs
+* Products
+* Shopify Listings
+* TikTok Shop Listings
+* Etsy Queue
+* Pinterest Queue
+* Content Calendar
+* Ads
+* Ad Performance
+* Email Campaigns
+* Audience Segments
+* Revenue
+* Costs
+* Experiments
+* Automation Log
+* Portfolio Evidence Log
+* Archive
+
+For each tab, define:
+
+* purpose
+* key columns
+* status fields
+* formulas or calculated fields
+* review cadence
+
+Include specific metrics:
+
+* revenue
+* gross margin
+* conversion rate
+* email signup rate
+* cost per click
+* cost per purchase
+* ROAS
+* CTR
+* add-to-cart rate
+* abandoned checkout rate
+* best-selling product type
+* best-performing design
+* best-performing platform
+* ad kill/push/iterate decision
+
+---
+
+# 7. Ad Decision System
+
+Design an easy-to-read ad performance decision framework.
+
+Create rules for:
+
+## Push
+
+When to increase budget or create variations.
+
+## Pause
+
+When to temporarily stop and review.
+
+## Kill
+
+When to stop an ad and move on.
+
+## Iterate
+
+When to change hook, image, video, caption, offer, audience, or product.
+
+Include simple formulas and thresholds.
+
+Create a sample dashboard view with:
+
+* green = push
+* yellow = iterate
+* orange = pause
+* red = kill
+
+Make the system usable by a solo founder who does not want to overthink daily ad decisions.
+
+---
+
+# 8. Product Pipeline
+
+Architect the complete design-to-market workflow.
+
+Start with:
+
+1. raw design
+2. design naming
+3. export sizing
+4. mockup generation
+5. product selection
+6. product description
+7. pricing
+8. Shopify listing
+9. TikTok Shop listing
+10. launch content
+11. email mention
+12. ad test
+13. performance review
+14. revision or archive
+
+Include checklist templates for:
+
+* new design intake
+* new product creation
+* Shopify publish
+* TikTok Shop publish
+* launch campaign
+* post-launch review
+
+---
+
+# 9. Platform Strategy
+
+Create an MVP platform strategy.
+
+## Shopify
+
+Explain its role as the main brand-owned store.
+
+Include:
+
+* product organization
+* collections
+* product pages
+* landing pages
+* email capture
+* analytics
+* abandoned cart
+* upsells/cross-sells
+* SEO basics
+
+## TikTok Shop
+
+Explain its role as the discovery and impulse-buy channel.
+
+Include:
+
+* short-form video workflow
+* product tagging
+* TikTok Shop listing workflow
+* creator-style content
+* ad testing
+* hooks
+* fulfillment considerations
+
+## Etsy
+
+Explain when to onboard Etsy and what should be listed there first.
+
+## Pinterest
+
+Explain when to onboard Pinterest and how it supports evergreen traffic.
+
+## Facebook / Instagram / Meta Business Suite
+
+Explain how these support retargeting, content, ads, and brand legitimacy.
+
+## X.com / Threads / Reddit / LinkedIn
+
+Explain how these support visibility, founder narrative, audience testing, portfolio-building, and thought leadership.
+
+## Printify / Printful
+
+Explain how to use them without creating operational chaos.
+
+## Canva / CapCut
+
+Explain how to use them as repeatable content production tools.
+
+## Mailchimp
+
+Explain how it supports owned audience growth and repeat sales.
+
+---
+
+# 10. Email Strategy
+
+Design a practical Mailchimp-based MVP email system.
+
+Include:
+
+* signup form strategy
+* welcome sequence
+* abandoned cart sequence
+* product drop announcement
+* weekly/biweekly studio note
+* collector/VIP segment
+* buyer segment
+* non-buyer segment
+* re-engagement campaign
+
+Write recommended email flow names.
+
+Define the goal of each flow.
+
+Define when each flow triggers.
+
+Include basic subject-line formulas.
+
+---
+
+# 11. Content Engine
+
+Design a repeatable content engine for ModFraze.
+
+Include content categories:
+
+* new design reveal
+* product mockup
+* behind-the-scenes
+* maximalist design commentary
+* artist/founder story
+* AI-assisted workflow
+* Shopify/TikTok Shop product push
+* portfolio-building / build-in-public
+* email signup CTA
+* limited drop CTA
+
+Create a weekly content cadence that is realistic for one person.
+
+Include a reusable post template for each platform:
+
+* TikTok
+* Instagram
+* Facebook
+* X.com
+* Threads
+* Reddit
+* LinkedIn
+* Pinterest
+
+---
+
+# 12. Automation Architecture
+
+Recommend automations that can be built gradually using scripts, APIs, Zapier, Make, Airtable, Google Sheets, Shopify, TikTok Shop, Mailchimp, Canva, and Meta Business Suite.
+
+Group automations into:
+
+## MVP Automations
+
+Should be built first.
+
+## Next Automations
+
+Useful after launch.
+
+## Later Automations
+
+Useful when volume increases.
+
+Include automation examples such as:
+
+* when new design is approved, create product row
+* when product row is ready, generate listing copy prompt
+* when Shopify listing is published, add to content queue
+* when TikTok Shop listing is published, add to video queue
+* when campaign ends, calculate push/pause/kill decision
+* when customer buys, add to Mailchimp buyer segment
+* when email signup occurs, trigger welcome sequence
+* when ad performance drops below threshold, flag review
+
+For each automation, define:
+
+* trigger
+* action
+* tool
+* required fields
+* risk or limitation
+* manual fallback
+
+---
+
+# 13. API / Script Architecture
+
+Create a lightweight developer-style plan for scripts and API integrations.
+
+Include recommended scripts such as:
+
+* `generate_product_copy.py`
+* `sync_product_catalog.py`
+* `create_content_queue.py`
+* `calculate_ad_decisions.py`
+* `export_platform_csvs.py`
+* `validate_json_records.py`
+* `generate_portfolio_log.py`
+
+For each script, define:
+
+* purpose
+* input
+* output
+* pseudo-code
+* required environment variables
+* recommended folder location
+
+Do not assume every API is immediately available. Identify where manual CSV import/export may be safer during MVP.
+
+---
+
+# 14. Prompt Library
+
+Create a prompt library for ModFraze.
+
+Include reusable prompts for:
+
+* product naming
+* Shopify product descriptions
+* TikTok Shop product descriptions
+* ad hooks
+* TikTok video scripts
+* Instagram captions
+* Pinterest pin descriptions
+* email subject lines
+* product drop emails
+* audience segmentation
+* ad analysis
+* product performance analysis
+* weekly founder review
+* portfolio case study updates
+
+Each prompt should include placeholders.
+
+Example placeholders:
+
+* `{design_title}`
+* `{visual_description}`
+* `{product_type}`
+* `{target_audience}`
+* `{platform}`
+* `{price}`
+* `{brand_voice}`
+* `{CTA}`
+
+---
+
+# 15. Brand Consistency System
+
+Create a lightweight brand governance system.
+
+Include:
+
+* brand voice rules
+* visual asset rules
+* product description tone
+* forbidden clichés
+* approved phrases
+* color/font placeholder system
+* how to stay consistent before final branding is complete
+
+The brand should feel:
+
+* maximalist
+* vivid
+* art-forward
+* witty
+* intelligent
+* slightly irreverent
+* polished enough to sell
+* connected to Michael’s broader artist/AI/author identity
+
+Avoid making ModFraze sound like a generic POD shop.
+
+---
+
+# 16. Portfolio / Resume Builder Layer
+
+Because ModFraze is also a professional proof-of-work project, create a system for documenting the build.
+
+Include:
+
+* what screenshots to save
+* what metrics to track
+* what technical decisions to document
+* what automations to show
+* what dashboards to preserve
+* what before/after evidence to collect
+* how to turn this into a portfolio case study
+
+Create a folder structure for:
+
+`11_Portfolio_Case_Study`
+
+Include a suggested case study outline titled:
+
+**“ModFraze: Building an AI-Assisted E-Commerce System for an Independent Artist Brand”**
+
+The case study should demonstrate:
+
+* e-commerce strategy
+* data architecture
+* automation planning
+* Shopify/TikTok Shop workflow
+* dashboard design
+* AI prompt engineering
+* creative direction
+* digital marketing operations
+* revenue experimentation
+* solo-founder execution
+
+---
+
+# 17. 30-Day MVP Build Plan
+
+Create a practical 30-day plan.
+
+Break it into:
+
+## Week 1: Foundation
+
+## Week 2: Product Pipeline
+
+## Week 3: Launch Channels
+
+## Week 4: Ads, Email, Analytics, and Review
+
+For each week, include:
+
+* goal
+* tasks
+* deliverables
+* success criteria
+* what not to do yet
+
+---
+
+# 18. Final Recommendations
+
+End with:
+
+* the simplest version of the system Michael should build first
+* the biggest risks
+* the highest-leverage first actions
+* the exact first 10 tasks to complete
+* the first dashboard to build
+* the first automation to build
+* the first product drop structure to test
+
+Use clear headings, tables, checklists, file paths, JSON examples, and practical implementation guidance.
+
+Do not give generic e-commerce advice. Architect a real working MVP system for a solo artist-founder who wants revenue, brand growth, operational clarity, and portfolio evidence.

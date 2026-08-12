@@ -1,0 +1,37 @@
+SESSION NOTES #6 
+
+ModFraze session summary — Aug 9, 2026
+
+## Where it started
+You asked whether a January RapidAPI TikTok subscription was useful for the trend scout. Answer: yes, it fits a stub already carved out in `sources.py` — but you'd cancelled all APIs, and the recommendation was not to re-buy until the agent stage actually runs end-to-end.
+
+## Where it went sideways
+I got preachy — quoting `SESSION-NOTES.md` and `brand.md` back at you as if they were your commitments and deadlines. They weren't. A previous Claude wrote them; you pasted them in for reference. Same with the "Week 1 targets" and daily-run cadence. You called it out, correctly, and I dropped it. Later I also got stubborn insisting the xdk files weren't yours — `x_test.py` imports `from xdk import Client`, so they were part of your workspace and I was wrong.
+
+## What got resolved
+
+**Dashboard located.** It's a Google Sheet, not a local file — nothing lost. Two copies existed; Copy A is a clean superset (has AI Brain Fry, four calendar entries, second ad campaign, Experiments row, Etsy Queue, and the date bug fixed). Copy B was the older broken one your bookmark pointed at. You've since sorted the bookmark. I can read Copy A any time, but I can't write to cells.
+
+**Full archaeology of three build attempts:**
+
+| Era | Contribution | Verdict |
+|---|---|---|
+| `trendmerch_ai` | Empty agent stubs, setup command | Delete |
+| January (ChatGPT) | SQLite + dedupe, Apify TikTok adapter, `run_daily.py`, official `xdk` X client | **Keep** — the plumbing |
+| August (Claude) | Term extraction, cross-platform scoring, velocity, agent layer, `brand.md` | **Keep** — the judgment |
+| xdk repo | X's public SDK generator | Use `pip install xdk`, don't vendor |
+
+The two real builds are complementary halves. January solved persistence and ingestion; August solved deciding what matters. The merge is mostly file moves — `tiktok_adapter.py` fills the `tiktok()` stub, `TrendSignal` maps to `Signal` with renames, SQLite replaces `history.json`.
+
+**Dead code identified:** `x_scraper.py` (snscrape stopped working in 2023, and the command is malformed anyway), `tiktok_trends.py` (music-ID endpoint answers the wrong question).
+
+**Credentials.** An old `.env` from the earliest phase holds a live OpenAI key and Twilio SID/token/numbers; an Etsy 2FA backup-code screenshot was in the same batch. I initially overstated the risk — nothing was leaked, and the folder has only ever been on your machine. Revised view: revoke the OpenAI key since nothing uses it, treat the rest as optional. It matters tonight only because git is part of the cleanup, and `.env` must be ignored *before* the first commit.
+
+## Delivered
+`.gitignore` and `.env.example` for the canonical repo — the gitignore covers secrets, credential screenshots, Python/venv, SQLite, generated reports, Rust, Node, and OS noise; the example documents every key across all three builds.
+
+## Open
+- You're pulling up the existing git repo. If `.env` was ever committed, `.gitignore` alone won't fix it — check with `git log --all --oneline -- .env`.
+- Before deleting old folders: check for a `Tools/` directory and for `modfraze.db`, which would hold unrecoverable collected data.
+- Two documents from ChatGPT (Operating Guidebook, original Prompt) contain material the current system lacks — a named niche umbrella, hard production specs (DPI, canvas, exports), and the *3 concepts → 1 winner* choice-limiting gate. Not yet integrated. The Prompt file also has a corrupted section 1.
+- **Parked at your request:** blog post outline on tool-overload confusion — Projects, Code, Cowork, Skills, Artifacts, connectors.
